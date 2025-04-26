@@ -1,0 +1,149 @@
+/* Mobile responsiveness improvements */
+
+/* Base responsive container */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive grid layouts */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Adjust card padding for mobile */
+  .card, .bg-white {
+    padding: 0.75rem;
+  }
+  
+  /* Stack grid items on mobile */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Adjust font sizes for mobile */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  
+  h3 {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Prevent zoom on mobile inputs */
+  input, select, textarea, button {
+    font-size: 16px !important;
+  }
+  
+  /* Make tables responsive on mobile */
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Adjust form layouts for mobile */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Adjust button sizes for better touch targets */
+  button {
+    padding: 0.5rem 0.75rem;
+    min-height: 44px; /* Minimum touch target size */
+  }
+  
+  /* Adjust spacing for mobile */
+  .mb-6 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .py-6 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  /* Improve mobile navigation */
+  nav {
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+  
+  /* Adjust grid for tablets */
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Improve touch interactions */
+button, a, input[type="checkbox"], input[type="radio"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Improve form field spacing on mobile */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Improve mobile charts */
+.recharts-responsive-container {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 300px;
+}
+
+/* Fix for mobile overflow issues */
+body {
+  overflow-x: hidden;
+}
+
+/* Improve mobile scrolling */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Improve mobile tap highlight */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Improve mobile selection */
+::selection {
+  background-color: rgba(30, 64, 175, 0.2);
+}

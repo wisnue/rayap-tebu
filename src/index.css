@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #1E40AF;
+  --button-color: rgb(37, 99, 235);
+  --body-bg: #f3f4f6;
+  --border-color: #e5e7eb;
+  --border-radius: 0.3rem;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: var(--body-bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* Update background colors */
+.bg-gray-50 {
+  background-color: #f3f4f6 !important;
+}
+
+/* Add border to all form elements */
+input, select, textarea {
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--button-color) !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Button styles */
+button {
+  border-radius: var(--border-radius) !important;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+button.primary {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+}
+
+button.primary:hover {
+  background-color: #1e40af;
+}
+
+button.secondary {
+  background-color: white;
+  color: #374151;
+  border: 1px solid var(--border-color);
+}
+
+button.secondary:hover {
+  background-color: #f9fafb;
+}
+
+/* Card styles */
+.card, .bg-white {
+  background-color: white;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.pagination button {
+  margin: 0 0.25rem;
+}
+
+/* Header and footer styles */
+header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Logo styles */
+.logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+/* Chart container styles */
+.chart-container {
+  background-color: white;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.chart-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Alert styles */
+.alert {
+  border-radius: var(--border-radius) !important;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Make all rounded elements consistent */
+.rounded, .rounded-md, .rounded-lg, .rounded-xl {
+  border-radius: var(--border-radius) !important;
+}
+
+/* Improve mobile responsiveness */
+@media (max-width: 640px) {
+  .card, .bg-white {
+    padding: 1rem;
+  }
+  
+  input, select, textarea, button {
+    font-size: 16px; /* Prevent zoom on mobile */
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Optimize loading performance */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve contrast */
+.text-gray-500 {
+  color: #4b5563 !important; /* Darker gray for better contrast */
+}
+
+.text-gray-400 {
+  color: #6b7280 !important;
+}
+
+/* Improve focus visibility for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}

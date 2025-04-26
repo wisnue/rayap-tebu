@@ -1,0 +1,86 @@
+.shadow-custom {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.bg-white {
+  background-color: white;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  padding: 1.25rem;
+}
+
+/* Improve contrast for better readability */
+.text-gray-500 {
+  color: #4b5563 !important; /* Darker gray for better contrast */
+}
+
+.text-gray-400 {
+  color: #6b7280 !important;
+}
+
+/* Button hover effects for better interactivity */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Table row hover effect */
+tr:hover {
+  background-color: rgba(243, 244, 246, 0.8);
+}
+
+/* Form element focus states */
+input:focus, select:focus, textarea:focus {
+  border-color: #1E40AF !important;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.2);
+}
+
+/* Card hover effect */
+.card:hover, .bg-white:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Improve contrast for links */
+a {
+  color: #1E40AF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Improve contrast for buttons */
+.bg-blue-600, .bg-[#1E40AF] {
+  background-color: #1E40AF !important;
+}
+
+.bg-blue-600:hover, .bg-[#1E40AF]:hover {
+  background-color: #1e3a8a !important;
+}
+
+/* Improve contrast for success and error messages */
+.bg-green-100 {
+  background-color: #dcfce7 !important;
+  border-color: #86efac !important;
+}
+
+.text-green-700 {
+  color: #15803d !important;
+}
+
+.bg-red-100 {
+  background-color: #fee2e2 !important;
+  border-color: #fca5a5 !important;
+}
+
+.text-red-700 {
+  color: #b91c1c !important;
+}

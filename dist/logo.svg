@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="80" fill="white"/>
+  
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="200" fill="#f3f4f6"/>
+  
+  <!-- Sugarcane Stalks -->
+  <path d="M180 120C180 120 160 180 170 240C180 300 160 360 160 360" stroke="#10b981" stroke-width="24" stroke-linecap="round"/>
+  <path d="M220 100C220 100 200 170 210 240C220 310 200 380 200 380" stroke="#059669" stroke-width="24" stroke-linecap="round"/>
+  <path d="M260 110C260 110 240 180 250 250C260 320 240 390 240 390" stroke="#10b981" stroke-width="24" stroke-linecap="round"/>
+  <path d="M300 130C300 130 280 190 290 250C300 310 280 370 280 370" stroke="#059669" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- Termite Body -->
+  <ellipse cx="320" cy="280" rx="70" ry="40" fill="#1E40AF"/>
+  
+  <!-- Termite Head -->
+  <circle cx="370" cy="260" r="30" fill="#1E40AF"/>
+  
+  <!-- Termite Eyes -->
+  <circle cx="380" cy="250" r="6" fill="white"/>
+  <circle cx="360" cy="250" r="6" fill="white"/>
+  
+  <!-- Termite Legs -->
+  <path d="M290 290L260 330" stroke="#1E40AF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M310 300L290 350" stroke="#1E40AF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M330 300L320 350" stroke="#1E40AF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M350 290L360 330" stroke="#1E40AF" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Termite Antennae -->
+  <path d="M370 230L350 190" stroke="#1E40AF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M380 230L400 190" stroke="#1E40AF" stroke-width="6" stroke-linecap="round"/>
+</svg>

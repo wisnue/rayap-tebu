@@ -1,0 +1,126 @@
+/* Performance optimizations */
+
+/* Enable hardware acceleration for animations */
+.animate, 
+.transition,
+.hover\:transform,
+.transform,
+button:hover,
+.card:hover,
+.bg-white:hover {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Optimize font loading */
+@font-face {
+  font-family: 'ui-sans-serif';
+  font-display: swap;
+}
+
+/* Optimize image loading */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  content-visibility: auto;
+}
+
+/* Reduce layout shifts */
+img, svg, button, .card, .bg-white {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize rendering */
+.content-visibility-auto {
+  content-visibility: auto;
+}
+
+/* Optimize paint performance */
+.paint-optimization {
+  transform: translateZ(0);
+}
+
+/* Optimize for low-end devices */
+@media (max-width: 640px) {
+  .recharts-responsive-container {
+    max-height: 300px;
+  }
+  
+  /* Reduce animation complexity on mobile */
+  .animate, 
+  .transition,
+  .hover\:transform,
+  .transform {
+    transition-duration: 150ms !important;
+  }
+}
+
+/* Lazy load images */
+.lazy-load {
+  loading: lazy;
+}
+
+/* Optimize table rendering */
+table {
+  table-layout: fixed;
+}
+
+/* Optimize form submissions */
+form {
+  contain: content;
+}
+
+/* Optimize scrolling */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Optimize CSS containment */
+.contain-layout {
+  contain: layout;
+}
+
+.contain-paint {
+  contain: paint;
+}
+
+.contain-strict {
+  contain: strict;
+}
+
+/* Optimize for print */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Optimize for high contrast mode */
+@media (forced-colors: active) {
+  button, a {
+    forced-color-adjust: none;
+  }
+}
+
+/* Optimize for dark mode */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-support {
+    color-scheme: dark;
+  }
+}
