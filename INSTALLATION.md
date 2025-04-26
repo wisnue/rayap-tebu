@@ -25,14 +25,14 @@ Sebelum memulai, pastikan komputer Anda telah memiliki:
      node --version
      ```
 
-2. **pnpm** (alternatif: npm atau yarn)
+2. **npm** (alternatif: npm atau yarn)
    - Setelah Node.js terinstal, buka Command Prompt atau Terminal dan ketik:
      ```
-     npm install -g pnpm
+     npm install -g npm
      ```
-   - Untuk memastikan pnpm terinstal, ketik:
+   - Untuk memastikan npm terinstal, ketik:
      ```
-     pnpm --version
+     npm --version
      ```
 
 3. **Git** (opsional, jika Anda ingin mengkloning repositori)
@@ -63,16 +63,20 @@ Sebelum memulai, pastikan komputer Anda telah memiliki:
 2. **Instal Dependensi**
    - Di dalam direktori aplikasi, jalankan:
      ```
-     pnpm install
+     npm install
      ```
    - Tunggu hingga semua dependensi terinstal (ini mungkin memerlukan waktu beberapa menit)
+   - jika terjadi error karena date-fns gunakan perintah berikut ini 
+     ```
+     npm install date-fns@^3.0.0
+     ```
 
 ### Menjalankan Aplikasi
 
 1. **Mode Pengembangan**
    - Untuk menjalankan aplikasi dalam mode pengembangan:
      ```
-     pnpm run dev
+     npm run dev
      ```
    - Buka browser dan akses `http://localhost:5173`
    - Aplikasi akan otomatis dimuat ulang jika Anda mengubah kode sumber
@@ -80,14 +84,14 @@ Sebelum memulai, pastikan komputer Anda telah memiliki:
 2. **Build untuk Produksi**
    - Untuk membuat versi produksi:
      ```
-     pnpm run build
+     npm run build
      ```
    - Hasil build akan tersedia di folder `dist`
 
 3. **Menjalankan Versi Produksi Secara Lokal**
    - Setelah build, Anda dapat menjalankan versi produksi dengan:
      ```
-     pnpm run preview
+     npm run preview
      ```
    - Buka browser dan akses `http://localhost:4173`
 
@@ -118,7 +122,7 @@ Sebelum memulai, pastikan komputer Anda telah memiliki:
 3. **Konfigurasi Build**
    - Netlify akan otomatis mendeteksi bahwa ini adalah proyek React/Vite
    - Pastikan pengaturan build berikut:
-     - Build command: `pnpm run build`
+     - Build command: `npm run build`
      - Publish directory: `dist`
    - Klik "Deploy site"
 
@@ -131,7 +135,7 @@ Sebelum memulai, pastikan komputer Anda telah memiliki:
 1. **Build Aplikasi Lokal**
    - Di komputer Anda, jalankan:
      ```
-     pnpm run build
+     npm run build
      ```
    - Ini akan membuat folder `dist` dengan file-file yang siap di-deploy
 
@@ -164,18 +168,18 @@ Sebelum memulai, pastikan komputer Anda telah memiliki:
 
 ### Masalah Umum Instalasi Lokal
 
-1. **Node.js atau pnpm tidak ditemukan**
-   - Pastikan Anda telah menginstal Node.js dan pnpm
+1. **Node.js atau npm tidak ditemukan**
+   - Pastikan Anda telah menginstal Node.js dan npm
    - Restart Command Prompt atau Terminal setelah instalasi
    - Periksa apakah path instalasi telah ditambahkan ke variabel PATH sistem
 
 2. **Kesalahan saat instalasi dependensi**
-   - Coba hapus folder `node_modules` dan file `pnpm-lock.yaml`
-   - Jalankan `pnpm install` lagi
+   - Coba hapus folder `node_modules` dan file `npm-lock.yaml`
+   - Jalankan `npm install` lagi
 
 3. **Aplikasi tidak berjalan di localhost**
    - Periksa apakah port 5173 sudah digunakan oleh aplikasi lain
-   - Coba jalankan dengan port berbeda: `pnpm run dev -- --port 3000`
+   - Coba jalankan dengan port berbeda: `npm run dev -- --port 3000`
 
 ### Masalah Umum Deployment Netlify
 
